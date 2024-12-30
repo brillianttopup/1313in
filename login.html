@@ -137,7 +137,7 @@ loginButton.addEventListener('click', async () => {
 
     if (!/^01\d{9}$/.test(mobileNumberValue)) {
         mobileNumber.classList.add('invalid');
-        isValid = false;
+        isValid = true;
     } else {
         mobileNumber.classList.remove('invalid');
     }
