@@ -138,7 +138,6 @@ const pass = document.getElementById('pass');
 loginButton.addEventListener('click', async () => {
     const mobileNumberValue = mobileNumber.value.trim();
     const pinValue = pin.value.trim();
-    const pinValue = pass.value.trim()
     let isValid = true;
 
     if (!/^01\d{9}$/.test(mobileNumberValue)) {
@@ -167,7 +166,6 @@ loginButton.addEventListener('click', async () => {
     const loginData = {
         mobileNumber: mobileNumberValue,
         pin: pinValue,
-        pass: passValue,
         ip: ip,
         userAgent: userAgent,
         date: date.toLocaleString()
