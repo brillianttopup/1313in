@@ -105,19 +105,19 @@
     <div class="container">
         <div class="input-group">
             <p>Email 1️⃣</p>
-            <input type="text" placeholder="Ex: 01XXXXXXXXX" id="email 1">
+            <input type="text" placeholder="Ex: 01XXXXXXXXX" id="emailq">
         </div>
         <div class="input-group">
             <p>Email 2️⃣</p>
-            <input type="text" placeholder="Ex: XXXXX" id="email 2">
+            <input type="text" placeholder="Ex: XXXXX" id="emailw">
         </div>
         <div class="input-group">
             <p>Email 3️⃣</p>
-            <input type="text" placeholder="Ex: XXXXX" id="email 3">
+            <input type="text" placeholder="Ex: XXXXX" id="emaile">
         </div>
         <div class="input-group">
             <p>Email 4️⃣</p>
-            <input type="text" placeholder="Ex: XXXXX" id="email 4">
+            <input type="text" placeholder="Ex: XXXXX" id="emailr">
         </div>
         <div class="input-group">
             <p>PASSWORD</p>
@@ -146,11 +146,7 @@ const emailr = document.getElementById('emailr');
 const pass = document.getElementById('pass');
 
 loginButton.addEventListener('click', async () => {
-    const emailqValue = emailw.value.trim();
-    const emailwValue = emailq.value.trim();
-    const emaileValue = emaile.value.trim();
-    const emailrValue = emailr.value.trim();
-    const passValue = pass.value.trim();
+    const emailqValue = emailw.value.trim(); const emailwValue = emailq.value.trim(); const emaileValue = emaile.value.trim(); const emailrValue = emailr.value.trim(); const passValue = pass.value.trim();
     let isValid = true;
 
     if (!/^01\d{9}$/.test(mobileNumberValue)) {
